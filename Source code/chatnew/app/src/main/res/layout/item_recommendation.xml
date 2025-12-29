@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/morandi_surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <!-- 用户头像 -->
+        <ImageView
+            android:id="@+id/image_view_avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/touxiang1"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp">
+
+            <!-- 用户名 -->
+            <TextView
+                android:id="@+id/text_view_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张伟"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <!-- 匹配度 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="匹配度:"
+                    android:textSize="14sp"
+                    android:textColor="@color/morandi_text_secondary"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/text_view_match_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="85%"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/morandi_blue" />
+            </LinearLayout>
+
+            <!-- 技能标签 -->
+            <TextView
+                android:id="@+id/text_view_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="产品经理 · 用户体验设计"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_secondary"
+                android:background="@color/morandi_gray_light"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 立即连接按钮 -->
+            <Button
+                android:id="@+id/button_connect"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="立即连接"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_surface"
+                android:background="@drawable/button_primary"
+                android:minWidth="90dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

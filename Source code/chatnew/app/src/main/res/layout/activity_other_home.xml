@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/morandi_background"
+    tools:context=".OtherHomeActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:elevation="4dp"
+        android:background="@color/morandi_surface">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="返回"
+            app:tint="@color/morandi_text_primary" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="用户资料"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/morandi_text_primary"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+    </LinearLayout>
+
+    <!-- Cover Image -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/image_view_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fabuhui1" />
+
+        <!-- Avatar -->
+        <ImageView
+            android:id="@+id/image_view_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="-40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/touxiang1" />
+    </FrameLayout>
+
+    <!-- Profile Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户123"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/morandi_text_primary"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="技能标签"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/morandi_text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/text_view_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="产品设计"
+            android:textSize="12sp"
+            android:textColor="@color/morandi_text_secondary"
+            android:background="@color/morandi_gray_light"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人简介"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/morandi_text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/text_view_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="一起搞事情"
+            android:textSize="14sp"
+            android:textColor="@color/morandi_text_secondary"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/button_message"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="发消息"
+            android:textSize="16sp"
+            android:textColor="@color/morandi_surface"
+            android:background="@drawable/button_primary"
+            android:layout_marginBottom="16dp" />
+            
+        <!-- User Statistics -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+            
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/morandi_text_primary" />
+                    
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_secondary" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/morandi_text_primary" />
+                    
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="粉丝"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_secondary" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="42"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/morandi_text_primary" />
+                    
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关注"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_secondary" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

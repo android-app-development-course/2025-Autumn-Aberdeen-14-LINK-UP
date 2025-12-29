@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/morandi_background"
+    tools:context=".EditHomeActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:elevation="4dp"
+        android:background="@color/morandi_surface">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="返回"
+            app:tint="@color/morandi_text_primary" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="编辑主页"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/morandi_text_primary"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:textSize="16sp"
+            android:textColor="@color/morandi_blue"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground" />
+    </LinearLayout>
+
+    <!-- Edit Form -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/et_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="请输入昵称"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="技能标签"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/et_tags"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="请输入技能标签，多个用逗号分隔"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人简介"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/et_bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入个人简介"
+                android:padding="12dp"
+                android:minHeight="100dp"
+                android:gravity="top"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="保存"
+                android:textSize="16sp"
+                android:textColor="@color/morandi_surface"
+                android:background="@drawable/button_primary"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

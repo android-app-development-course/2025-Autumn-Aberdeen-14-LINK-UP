@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/morandi_surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 第一层：基础信息 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/image_view_avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/touxiang1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/text_view_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="张三"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/morandi_text_primary"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:id="@+id/text_view_identity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="高级产品经理"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_secondary"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/text_view_partner_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="项目搭子"
+                    android:textSize="10sp"
+                    android:textColor="@color/morandi_blue"
+                    android:background="@drawable/button_secondary"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 第二层：匹配维度 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地域匹配"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_secondary"
+                    android:layout_marginBottom="4dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_location"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:progress="80"
+                    android:progressTint="@color/morandi_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="兴趣匹配"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_secondary"
+                    android:layout_marginBottom="4dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_interest"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:progress="75"
+                    android:progressTint="@color/morandi_blue" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 第三层：推荐理由和共同标签 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推荐理由"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/text_view_recommend_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你们都在互联网行业工作，且对用户体验设计有浓厚兴趣"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_secondary"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="共同标签："
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_secondary"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/text_view_common_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户调研、爬山"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_blue" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 第四层：互动按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_skip"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="跳过"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_primary"
+                android:background="@drawable/button_secondary"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_view_match"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="匹配度"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_primary"
+                android:background="@drawable/button_primary"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="添加"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_primary"
+                android:background="@drawable/button_primary"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_chat"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="聊天"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_primary"
+                android:background="@drawable/button_secondary" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

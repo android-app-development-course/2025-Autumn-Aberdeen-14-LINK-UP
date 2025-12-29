@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 莫兰迪色系 - 主色调偏蓝色 -->
+    <color name="morandi_blue">#8DA9C4</color> <!-- 主色调：莫兰迪蓝色 -->
+    <color name="morandi_blue_light">#B3C8D3</color> <!-- 浅蓝色 -->
+    <color name="morandi_blue_dark">#5A7D9A</color> <!-- 深蓝色 -->
+    
+    <color name="morandi_background">#E8EAF6</color> <!-- 背景色 -->
+    <color name="morandi_surface">#F5F7FA</color> <!-- 表面色 -->
+    <color name="morandi_accent">#A3BDE3</color> <!-- 强调色 -->
+    
+    <color name="morandi_text_primary">#333333</color> <!-- 主要文字色 -->
+    <color name="morandi_text_secondary">#666666</color> <!-- 次要文字色 -->
+    <color name="morandi_text_tertiary">#999999</color> <!-- 第三文字色 -->
+    
+    <color name="morandi_gray">#D1D5DB</color> <!-- 灰色 -->
+    <color name="morandi_gray_light">#E5E7EB</color> <!-- 浅灰色 -->
+    <color name="morandi_gray_dark">#9CA3AF</color> <!-- 深灰色 -->
+    
+    <!-- 按钮颜色 -->
+    <color name="morandi_button_primary">#2196F3</color> <!-- 主要按钮：用户偏好蓝色 -->
+    <color name="morandi_button_secondary">#D1D5DB</color> <!-- 次要按钮 -->
+    
+    <!-- 边框和分割线颜色 -->
+    <color name="morandi_border">#D1D5DB</color>
+    
+    <!-- 特殊标签颜色 -->
+    <color name="morandi_gold">#FFD700</color> <!-- 金牌会员 -->
+    <color name="morandi_green">#4CAF50</color> <!-- 活跃达人 -->
+</resources>

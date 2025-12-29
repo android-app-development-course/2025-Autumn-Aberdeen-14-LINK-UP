@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/morandi_background"
+    tools:context=".SpacePageActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <!-- Top Info Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/morandi_surface"
+        android:elevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人空间"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/btn_edit_profile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_edit"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:tint="@color/morandi_blue" />
+        </RelativeLayout>
+
+        <!-- User Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/image_avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/touxiang1"
+                android:background="@drawable/circle_background"
+                android:layout_marginEnd="16dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                android:id="@+id/text_user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="用户名"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary"
+                android:layout_marginBottom="4dp"/>
+
+                <Button
+                    android:id="@+id/btn_new_publish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布"
+                    android:textSize="14sp"
+                    android:textColor="@color/morandi_surface"
+                    android:background="@drawable/button_primary"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                android:id="@+id/text_user_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UI/UX 设计师"
+                android:textSize="14sp"
+                android:textColor="@color/morandi_text_secondary"
+                android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tag_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="金牌会员"
+                        android:textSize="12sp"
+                        android:textColor="@color/morandi_gold"
+                        android:background="@drawable/tag_background"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tag_active"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="活跃达人"
+                        android:textSize="12sp"
+                        android:textColor="@color/morandi_green"
+                        android:background="@drawable/tag_background"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Data Overview Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_connections_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="128"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人脉"
+                android:textSize="14sp"
+                android:textColor="@color/morandi_text_secondary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_activities_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动"
+                android:textSize="14sp"
+                android:textColor="@color/morandi_text_secondary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_partners_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搭子"
+                android:textSize="14sp"
+                android:textColor="@color/morandi_text_secondary"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Skills Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="技能标签"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/morandi_text_primary"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_skills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleLine="false"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="4dp">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Figma设计"
+                android:textColor="@color/morandi_text_primary"
+                app:chipBackgroundColor="@color/morandi_gray_light"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户体验"
+                android:textColor="@color/morandi_text_primary"
+                app:chipBackgroundColor="@color/morandi_gray_light"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交互设计"
+                android:textColor="@color/morandi_text_primary"
+                app:chipBackgroundColor="@color/morandi_gray_light"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="原型制作"
+                android:textColor="@color/morandi_text_primary"
+                app:chipBackgroundColor="@color/morandi_gray_light"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户研究"
+                android:textColor="@color/morandi_text_primary"
+                app:chipBackgroundColor="@color/morandi_gray_light"
+                style="@style/Widget.MaterialComponents.Chip.Choice"/>
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+
+    <!-- Posts Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/morandi_surface">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_posts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/morandi_surface"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:id="@+id/tab_match"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_match"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:layout_marginBottom="4dp"
+                app:tint="@color/morandi_text_tertiary" />
+
+            <TextView
+                android:id="@+id/text_match"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="匹配"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_tertiary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_activities"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_activities"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_month"
+                android:layout_marginBottom="4dp"
+                app:tint="@color/morandi_text_tertiary" />
+
+            <TextView
+                android:id="@+id/text_activities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_tertiary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_partners"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_partners"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_input_add"
+                android:layout_marginBottom="4dp"
+                app:tint="@color/morandi_text_tertiary" />
+
+            <TextView
+                android:id="@+id/text_partners"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搭子"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_tertiary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_space"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_space"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_manage"
+                android:layout_marginBottom="4dp"
+                app:tint="@color/morandi_blue" />
+
+            <TextView
+                android:id="@+id/text_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="空间"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_profile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:layout_marginBottom="4dp"
+                app:tint="@color/morandi_text_tertiary" />
+
+            <TextView
+                android:id="@+id/text_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_tertiary" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

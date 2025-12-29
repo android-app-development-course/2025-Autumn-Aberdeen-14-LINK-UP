@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/morandi_background"
+    tools:context=".MyHomeActivity">
+
+    <!-- Top Info Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/morandi_surface"
+        android:elevation="4dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的空间"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/morandi_text_primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/settings_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_manage"
+            app:tint="@color/morandi_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- User Avatar -->
+        <ImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/touxiang1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/page_title" />
+
+        <!-- User Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/user_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/user_avatar"
+            app:layout_constraintBottom_toBottomOf="@id/user_avatar">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary" />
+
+            <TextView
+                android:id="@+id/user_identity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="互联网产品经理 · 3年经验"
+                android:textSize="14sp"
+                android:textColor="@color/morandi_text_secondary"
+                android:layout_marginTop="4dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/vip_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="金牌会员"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_gold"
+                    android:background="@drawable/tag_background"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp" />
+
+                <TextView
+                    android:id="@+id/expiry_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有效期至2025.12.31"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_secondary"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/influence_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="影响力指数：85"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_secondary"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Data Overview Section -->
+    <LinearLayout
+        android:id="@+id/data_overview_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/top_section">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/connections_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="128"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人脉连接"
+                android:textSize="14sp"
+                android:textColor="@color/morandi_text_secondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/activities_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动"
+                android:textSize="14sp"
+                android:textColor="@color/morandi_text_secondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/partners_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搭子"
+                android:textSize="14sp"
+                android:textColor="@color/morandi_text_secondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/projects_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目"
+                android:textSize="14sp"
+                android:textColor="@color/morandi_text_secondary" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Quick Functions Section -->
+    <LinearLayout
+        android:id="@+id/quick_functions_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/morandi_surface"
+        android:elevation="2dp"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/data_overview_section">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="快捷功能"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/morandi_text_primary"
+            android:layout_marginBottom="16dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_manage"
+                    android:layout_marginBottom="4dp"
+                    app:tint="@color/morandi_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账号管理"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_primary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_dialog_email"
+                    android:layout_marginBottom="4dp"
+                    app:tint="@color/morandi_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="邮件消息"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_primary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:layout_marginBottom="4dp"
+                    app:tint="@color/morandi_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="好友列表"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_primary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_lock_idle_lock"
+                    android:layout_marginBottom="4dp"
+                    app:tint="@color/morandi_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="付费会员"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_primary" />
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+
+    <!-- My Achievements Section -->
+    <LinearLayout
+        android:id="@+id/achievements_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/morandi_surface"
+        android:elevation="2dp"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/quick_functions_section">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的成就"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/morandi_text_primary"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/view_all_achievements"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看全部"
+                android:textSize="14sp"
+                android:textColor="@color/morandi_blue"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/touxiang1"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/circle_background" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活跃达人"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/morandi_text_primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="连续登录30天"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_secondary"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="获得于2025.12.15"
+                    android:textSize="12sp"
+                    android:textColor="@color/morandi_text_tertiary"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/morandi_surface"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/tab_match"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_match"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:layout_marginBottom="4dp"
+                app:tint="@color/morandi_text_tertiary" />
+
+            <TextView
+                android:id="@+id/text_match"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="匹配"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_tertiary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_activities"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_activities"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_month"
+                android:layout_marginBottom="4dp"
+                app:tint="@color/morandi_text_tertiary" />
+
+            <TextView
+                android:id="@+id/text_activities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_tertiary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_partners"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_partners"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_input_add"
+                android:layout_marginBottom="4dp"
+                app:tint="@color/morandi_text_tertiary" />
+
+            <TextView
+                android:id="@+id/text_partners"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搭子"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_tertiary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_space"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_space"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_manage"
+                android:layout_marginBottom="4dp"
+                app:tint="@color/morandi_text_tertiary" />
+
+            <TextView
+                android:id="@+id/text_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="空间"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_text_tertiary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_profile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:layout_marginBottom="4dp"
+                app:tint="@color/morandi_blue" />
+
+            <TextView
+                android:id="@+id/text_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:textSize="12sp"
+                android:textColor="@color/morandi_blue" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
